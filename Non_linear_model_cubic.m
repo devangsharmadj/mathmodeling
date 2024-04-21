@@ -73,7 +73,6 @@ dR_dlam = subs(diff(R, lam), substitution_constants, substitution_values);
 
 R_val = subs(R, substitution_constants, substitution_values);
 
-
 sensitivity_Init_price_subs = (1.5 / R_val) * dR_dInit_price_subs;
 sensitivity_Init_number_subs = (80000 / R_val) * dR_dInit_number_subs;
 sensitivity_Init_price_advert = (250 / R_val) * dR_dInit_price_advert;
@@ -83,6 +82,9 @@ sensitivity_mu1 = (-0.0001 / R_val) * dR_dmu1;
 sensitivity_lam = (-90000 / R_val) * dR_dlam;
 
 %disp(double(sensitivity_Init_price_subs));
+disp(['optimal x = ' num2str(1.8764676380259616281529126148734)]);
+disp(['optimal y = ' num2str(307.69576827944854127627650076179)]);
+disp(['maximized objective function = ' num2str(double(R_val))]);
 disp('Sensitivity analysis:');
 disp(['Sensitivity of Init_price_subs: ' num2str(double(sensitivity_Init_price_subs))]);
 disp(['Sensitivity of Init_number_subs: ' num2str(double(sensitivity_Init_number_subs))]);
@@ -91,6 +93,21 @@ disp(['Sensitivity of init_number_adverts: ' num2str(double(sensitivity_Init_num
 disp(['Sensitivity of mu0: ' num2str(double(sensitivity_mu0))]);
 disp(['Sensitivity of mu1: ' num2str(double(sensitivity_mu1))]);
 disp(['Sensitivity of lam: ' num2str(double(sensitivity_lam))]);
+
+%{
+Results:
+optimal x = 1.8765
+optimal y = 307.6958
+maximized objective function = 249556.304
+Sensitivity analysis:
+Sensitivity of Init_price_subs: 0.45199
+Sensitivity of Init_number_subs: 0.62995
+Sensitivity of Init_price_advert: -0.039392
+Sensitivity of init_number_adverts: 0.43154
+Sensitivity of mu0: 0.026711
+Sensitivity of mu1: -0.02368
+Sensitivity of lam: -0.037813
+%}
 
 
 
