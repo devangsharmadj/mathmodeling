@@ -44,9 +44,9 @@ sensitivity_v0 = (-0.5 / R_val) * dR_dv0;
 sensitivity_v1 = (-0.01 / R_val) * dR_dv1;
 
 %disp(double(sensitivity_Init_price_subs));
-%disp(['optimal x = ' num2str(2.974550611131228)]);
-%disp(['optimal y = ' num2str(218.97158696272078)]);
-%disp(['maximized objective function = ' num2str(243369.07260973746)]);
+disp(['optimal x = ' num2str(2.974550611131228)]);
+disp(['optimal y = ' num2str(218.97158696272078)]);
+disp(['maximized objective function = ' num2str(243369.07260973746)]);
 disp('Sensitivity analysis:');
 disp(['Sensitivity of Init_price_subs: ' num2str(double(sensitivity_Init_price_subs))]);
 disp(['Sensitivity of Init_number_subs: ' num2str(double(sensitivity_Init_number_subs))]);
